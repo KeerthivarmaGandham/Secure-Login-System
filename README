@@ -1,0 +1,56 @@
+# login page using Python and MySQL
+Overview
+
+The Secure Login System is a Python-based GUI application that
+ provides user authentication using MySQL as the database. 
+ The system includes signup and login functionalities, ensuring secure user access.
+
+ Features
+
+User Signup: Users can create an account with first name, last name, email, security question, and password.
+
+User Login: Users can log in using their email and password.
+
+Password Recovery: Security question-based password recovery (feature can be extended).
+
+GUI Interface: Developed using Tkinter for a user-friendly experience.
+
+Database Management: Uses MySQL for storing user credentials securely.
+
+
+Installation:
+
+Clone the Repository – Download the project from GitHub and navigate to the folder.
+Install Dependencies – Use pip to install all required modules listed in requirements.txt.
+Set Up MySQL Database – Create a database, run the SQL script to set up tables, and update credentials.py with database details.
+ 
+Before creating table,
+ create a database named login_data
+CREATE DATABASE login_data;
+
+Use Database
+USE login_data;
+
+create table login_credentials(
+   f_name VARCHAR(50) NOT NULL,
+   l_name VARCHAR(50) NOT NULL,
+   email VARCHAR(100) NOT NULL,
+   question VARCHAR(50) NOT NULL,
+   answer VARCHAR(100) NOT NULL,
+   password VARCHAR(50) NOT NULL,
+   PRIMARY KEY ( email )
+);
+
+Execution Guide:
+Open the terminal, navigate to the project directory, and enter the command:
+python loginpage.py
+
+Note: If the image path issue occurs in signuppage.py, verify the image location in your system, copy the full image path, and paste it into the code where the image is being loaded to ensure proper display.
+
+Run the Application – Execute the signup or login script using Python to start the system.
+
+Make sure all dependencies are installed and image paths are correctly configured.
+
+
+
+
